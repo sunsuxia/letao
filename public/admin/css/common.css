@@ -101,5 +101,9 @@ html,body{
 .lt_topbar a{
     color: #fff;
     font-size: 19px;
-
+}
+.chart_left,
+.chart_right{
+    width:45%;
+    height: 400px;
 }

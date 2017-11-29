@@ -27,4 +27,22 @@ $(".icon_menu").on("click", function () {
     $('.lt_aside').toggleClass('now');
     $('.lt_main').toggleClass('now');
 
+});
+//退出功能
+$(".icon_logout").on("click", function () {
+    $('#logoutModal').modal('show');
+    //off解绑所有事件
+$(".btn_logout").off().on('click', function () {
+    $.ajax({
+        type:'get',
+        url:"/employee/employeeLogout",
+        success: function (data) {
+            if(data.success){
+                //退出成功，才跳转到登录页面
+                location.href = "login.html";
+            }
+        }
+    })
+
 })
+});
