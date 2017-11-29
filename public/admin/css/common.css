@@ -7,3 +7,68 @@
 .panel h4{
     text-align: center;
 }
+ a{
+    text-decoration: none;
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+/*侧边栏*/
+html,body{
+    height: 100%;
+}
+.lt_aside{
+    width: 180px;
+    height:100%;
+    background-color: #222d32;
+}
+.lt_aside .brand a{
+    height: 50px;
+    width: 180px;
+    display: block;
+    background-color: #367fa9;
+    color: #ffffff ;
+    text-align: center;
+    line-height:50px;
+    font-size: 18px;
+}
+.lt_aside .user{
+    width: 180px;
+    height: 150px;
+}
+.lt_aside .user img{
+    width: 80px;
+    height: 80px;
+    display: block;
+    border-radius: 50%;
+    margin: 30px auto 0;
+}
+.lt_aside .user p{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height:40px;
+}
+.lt_aside .nav a{
+    height: 40px;
+    line-height:40px;
+    display: block;
+    padding-left: 30px;
+    color: #ccc;
+    border: 3px solid transparent;
+}
+.lt_aside .nav a.now{
+    background-color: #1d1f21;
+    color: #fff;
+    border-left-color: #069;
+}
+.lt_aside .nav .child a{
+    padding-left: 50px;
+}
