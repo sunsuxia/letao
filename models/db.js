@@ -17,7 +17,6 @@ const pool  = mysql.createPool({
 // 如果是三个参数：第一个SQL字符串，第二个数组，第三个参数回调函数
 exports.query = function() {
     let args = arguments;
-
     let sqlStr = args[0];
     let params = [];
     let callback;

@@ -1,3 +1,9 @@
 .bg_body{
-    background-color: #fff;
+    background-color:#222d32;
+}
+.mt_150{
+    margin-top: 100px;
+}
+.panel h4{
+    text-align: center;
 }
