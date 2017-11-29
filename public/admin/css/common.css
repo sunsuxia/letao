@@ -29,6 +29,12 @@ html,body{
     height:100%;
     background-color: #222d32;
     position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+.lt_aside.now{
+    left: -180px;
 }
 .lt_aside .brand a{
     height: 50px;
@@ -80,6 +86,10 @@ html,body{
     width: 100%;
     /*background-color: pink;*/
     padding-left:180px;
+    transition: all 1s;
+}
+.lt_main.now{
+    padding-left:0;
 }
 .lt_topbar{
     height: 50px;

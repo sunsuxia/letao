@@ -15,3 +15,16 @@ $(document).ajaxStop(function () {
         NProgress.done();
     }, 500);
 });
+//二级菜单显示与隐藏效果
+$('.child').prev().on('click', function () {
+    //slideToggle点击切换
+  $(this).next().slideToggle();
+});
+//侧边栏显示与隐藏
+$(".icon_menu").on("click", function () {
+    //console.log("hehhe");
+    //判断是否有这个类，有就删，没有就加
+    $('.lt_aside').toggleClass('now');
+    $('.lt_main').toggleClass('now');
+
+})
