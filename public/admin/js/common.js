@@ -15,6 +15,23 @@ $(document).ajaxStop(function () {
         NProgress.done();
     }, 500);
 });
+//非登陆页面，判断当前用户是否是登录了，如果登录了，就继续，如果没登陆，需要跳转到登录页面。
+if(location.href.indexOf("login.html") == -1){
+    $.ajax({
+        type:"get",
+        url:"/employee/checkRootLogin",
+        success:function (data) {
+            if(data.error === 400){
+                //说明用户没有登录，跳转到登录页面
+                location.href = "login.html";
+            }
+        }
+    })
+}
+
+
+
+
 //二级菜单显示与隐藏效果
 $('.child').prev().on('click', function () {
     //slideToggle点击切换
