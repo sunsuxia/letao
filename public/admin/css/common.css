@@ -113,3 +113,23 @@ html,body{
     width:45%;
     height: 400px;
 }
+.fileupload_box {
+    width: 82px;
+    height: 34px;
+    position: relative;
+}
+
+.fileupload_box:hover button {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.fileupload_box input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+}
