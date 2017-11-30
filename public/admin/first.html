@@ -113,8 +113,8 @@
     </div>
 </div>
 
-<!--禁用功能的模态框-->
-<div class="modal fade" tabindex="-1" id="addModal">
+<!--添加功能的模态框-->
+<div class="modal fade" tabindex="-1" id="firstModal">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
@@ -124,20 +124,13 @@
             <div class="modal-body">
                 <form id="form">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="categoryName" placeholder="请输入一级分类的名称">
+                        <input type="text" autocomplete="off" class="form-control" name="categoryName" placeholder="请输入一级分类的名称">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <!--
-                  html5新增了几个属性：
-                   placeholder：占位信息
-                   autofocus:自动获取焦点
-                   autoComplete:自动补全 默认是on,  off
-                   multiple:多选  select  input:file
-                   form="form" :form表单的id，允许你的input写到form的外面，可以通过form这个属性关联到表单，相当于写在form的里面。
-               -->
+
                 <button type="submit" form="form" class="btn btn-primary">添加</button>
             </div>
         </div>

@@ -36,11 +36,56 @@ render();
     $(".btn_add").on("click", function () {
 
         //显示添加模态框
-        $("#addModal").modal("show");
+        $("#firstModal").modal("show");
+
+
 
     });
 
 //    表单校验
+var $form=$("form");
+    $form.bootstrapValidator({
+        feedbackIcons:{
+            valid: 'glyphicon glyphicon-ok',
+            invalid:'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields:{
+            categoryName:{
+                validators:{
+                    notEmpty:{
+                        message:'一级分类名称不能为空'
+                    }
+                }
+            }
+        }
+    });
+
+
+
+//注册表单校验成功事件
+    $form.on('success.form.bv', function (e) {
+        //阻止浏览器的默认行为
+        e.preventDefault();
+        $.ajax({
+            type:"post",
+            url:"/category/addTopCategory",
+            data:$form.serialize(),
+        success: function (data) {
+            //console.log(data);
+            if(data.success){
+                //渲染成功关闭模态框
+                $('#firstModal').modal('hide');
+                page=1;
+                render();
+                //同时清空表单的样式和值
+                $form.data("bootstrapValidator").resetForm();
+                //重置表单的值
+                $form[0].reset();
+            }
+        }
+        })
+    })
 
 
 
